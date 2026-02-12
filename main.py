@@ -2,7 +2,7 @@ from fastapi import FastAPI, Request
 
 app = FastAPI()
 
-@app.get("/")
+@app.get("/health")
 def health():
     return {"ok": True}
 
@@ -12,9 +12,11 @@ async def kakao_skill(request: Request):
         "version": "2.0",
         "template": {
             "outputs": [
-                {"simpleText": {"text": "사진 받았어 😊"}}
+                {
+                    "simpleText": {
+                        "text": "서버 연결 성공 👍"
+                    }
+                }
             ]
         }
     }
-# test
-# rebuild
