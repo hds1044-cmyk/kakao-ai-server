@@ -27,8 +27,8 @@ async def kakao_skill(request: Request):
 
         feedback = response.choices[0].message.content
 
-    except Exception as e:
-        feedback = "AI 응답 중 오류가 발생했습니다."
+except Exception as e:
+    feedback = f"오류: {type(e).__name__} | {str(e)}"
 
     return JSONResponse({
         "version": "2.0",
