@@ -36,4 +36,9 @@ async def kakao_skill(request: Request):
             "outputs": [
                 {
                     "simpleText": {
-                        "te
+                        "text": f"📘 AI 피드백:\n\n{feedback}"
+                    }
+                }
+            ]
+        }
+    })
