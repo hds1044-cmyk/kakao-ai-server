@@ -30,7 +30,7 @@ KAKAO_TEXT_LIMIT = 900
 
 # 카카오 스킬 응답 제한 대비 "하드 타임아웃"
 # (환경에 따라 5초/10초 등 다를 수 있어서, 일단 9초로 두고 문제가 있으면 4.5초로 낮추세요)
-KAKAO_HARD_TIMEOUT_SEC = 9.0
+KAKAO_HARD_TIMEOUT_SEC = 4.5
 
 IMG_URL_RE = re.compile(r"^https?://.+\.(png|jpg|jpeg|webp)(\?.*)?$", re.IGNORECASE)
 
