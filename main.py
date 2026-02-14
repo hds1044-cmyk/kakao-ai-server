@@ -191,10 +191,11 @@ async def feedback_from_text(text: str) -> str:
 async def kakao_skill(request: Request):
     payload = await request.json()
 
-    import json
-    print("===== KAKAO PAYLOAD =====")
-    print(json.dumps(payload, ensure_ascii=False)[:4000])
-    print("===== END PAYLOAD =====")
+import json
+print("===== KAKAO PAYLOAD =====")
+print(json.dumps(payload, ensure_ascii=False, indent=2)[:20000])
+print("===== END PAYLOAD =====")
+
 
     utter = (payload.get("userRequest", {}) or {}).get("utterance", "") or ""
     img_url = extract_image_url(payload)
